@@ -1,0 +1,105 @@
+/* Department Page Specifics */
+.section-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 15px;
+}
+
+.dept-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    gap: 30px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.dept-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.dept-info {
+    flex: 1;
+    border-right: 1px solid var(--border);
+    padding-right: 30px;
+}
+
+.dept-title-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.dept-icon {
+    font-size: 1.5rem;
+    background: #f0f4f8;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.btn-email {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.dept-responsibilities {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.responsibilities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.responsibilities-grid label {
+    font-size: 0.9rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Serve Footer Call to Action */
+.serve-footer {
+    background: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.serve-footer p {
+    margin: 15px 0;
+    opacity: 0.9;
+}
+
+/* Responsive Fix for Cards */
+@media (max-width: 900px) {
+    .dept-card {
+        flex-direction: column;
+    }
+    .dept-info {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .responsibilities-grid {
+        grid-template-columns: 1fr;
+    }
+}

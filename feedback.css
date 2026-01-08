@@ -1,0 +1,96 @@
+/* Feedback Specific Styling */
+.privacy-banner {
+    background: var(--primary-dark);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+    font-size: 0.85rem;
+}
+
+.tag-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tag.selected {
+    background: var(--primary-dark);
+    color: white;
+    border-color: var(--primary-dark);
+}
+
+.type-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.type-btn {
+    border: 1px solid var(--border);
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.type-btn:has(input:checked) {
+    border-color: var(--primary-dark);
+    background: #f0f4f8;
+}
+
+.info-footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Center the feedback form and constrain its width relative to the page */
+.feedback-container {
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-container form {
+    width: min(900px, 80%); /* reaches up to 80% of available width, max 900px */
+    margin: 0 auto;
+}
+
+.feedback-container .form-section { margin-bottom: 16px; }
+
+.feedback-container textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    resize: vertical;
+    min-height: 140px;
+    font-family: inherit;
+}
+
+/* Optional: center the submit button within the same constrained width */
+.feedback-container .full-width { width: 100%; }
+
+@media (max-width: 480px) {
+    .feedback-container form { width: 94%; }
+}
